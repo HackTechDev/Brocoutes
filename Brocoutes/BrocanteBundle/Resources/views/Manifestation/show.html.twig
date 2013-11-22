@@ -1,0 +1,53 @@
+{% extends 'BrocoutesBrocanteBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/brocoutebrocante/css/job.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+    {% block body -%}
+        <h1>Manifestation</h1>
+
+        <table class="record_properties">
+            <tbody>
+                <tr>
+                    <th><label>Nom : </label></th>
+                    <td>{{ entity.nom }}</td>
+                </tr>
+                <tr>
+                    <th><label>Lieu : </label></th>
+                    <td>{{ entity.lieu }}</td>
+                </tr>
+
+                <tr>
+                    <th><label>Latitude : </label></th>
+                    <td>{{ entity.latitude }}</td>
+                </tr>
+                <tr>
+                    <th><label>Longitude : <label></th>
+                    <td>{{ entity.longitude }}</td>
+                </tr>
+
+                <tr>
+                    <th><label>Date : <label></th>
+                    <td>{{ entity.date|date('d/m/Y') }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul class="record_actions">
+            <li>
+                <a href="{{ path('manifestation_edit', { 'id': entity.id }) }}"> Edit </a> 
+                {{ form(delete_form) }}
+            </li>
+            <li>
+                <br/>
+                <a href="{{ path('manifestation') }}">
+                    Retour à liste des manifestations
+                </a>
+            </li>
+
+       </ul>
+    {% endblock %}
+{% endblock %}

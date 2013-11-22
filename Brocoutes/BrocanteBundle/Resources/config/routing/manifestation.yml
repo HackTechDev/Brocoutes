@@ -1,0 +1,32 @@
+manifestation:
+    pattern:  /
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:index" }
+
+manifestation_show:
+    pattern:  /{nom}/{lieu}/{id}
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:show" }
+    requirements:
+        id:  \d+
+
+manifestation_new:
+    pattern:  /new
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:new" }
+
+manifestation_create:
+    pattern:  /create
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:create" }
+    requirements: { _method: post }
+
+manifestation_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:edit" }
+
+manifestation_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:update" }
+    requirements: { _method: post|put }
+
+manifestation_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:delete" }
+    requirements: { _method: post|delete }

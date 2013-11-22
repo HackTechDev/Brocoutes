@@ -1,0 +1,8 @@
+brocoutes_brocante_homepage:
+    pattern:  /
+    defaults: { _controller: BrocoutesBrocanteBundle:Manifestation:index }
+
+BrocoutesBrocanteBundle_manifestation:
+    resource: "@BrocoutesBrocanteBundle/Resources/config/routing/manifestation.yml"
+    prefix:   /manifestation
+

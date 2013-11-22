@@ -1,0 +1,49 @@
+{% extends 'BrocoutesBrocanteBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/brocoutesbrocante/css/jobs.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+    {% block body -%}
+        <h1>List des manifestations</h1>
+
+        <table class="records_list">
+            <thead>
+                <tr>
+                    <th style="text-align: center">Nom</th>
+                    <th style="text-align: center">Lieu</th>
+                    <th style="text-align: center">Date</th>
+                    <th style="text-align: center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td><a href="{{ path('manifestation_show', { 'id': entity.id, 'nom': entity.nomslug, 'lieu': entity.lieuslug }) }}">{{ entity.nom }}</a></td>
+                    <td>
+                    &nbsp;
+                            {{ entity.lieu }}</td>
+                    <td>
+                    &nbsp;
+                            {% if entity.date %}{{ entity.date|date('d/m/Y') }}{% endif %}</td>
+                    <td>
+                    &nbsp;
+                            <a href="{{ path('manifestation_show', { 'id': entity.id, 'nom': entity.nomslug, 'lieu': entity.lieuslug }) }}">Afficher</a> |
+                            <a href="{{ path('manifestation_edit', { 'id': entity.id }) }}">Editer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <br/>
+            <ul>
+            <li>
+                <a href="{{ path('manifestation_new') }}">
+                    Ajouter une nouvelle manifestation
+                </a>
+            </li>
+        </ul>
+    {% endblock %}
+{% endblock %}

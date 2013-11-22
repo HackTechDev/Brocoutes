@@ -1,0 +1,85 @@
+{% extends 'BrocoutesBrocanteBundle::layout.html.twig' %}
+
+{% form_theme form _self %}
+ 
+{% block form_errors %}
+{% spaceless %}
+    {% if errors|length > 0 %}
+        <ul class="error_list">
+            {% for error in errors %}
+                <li>{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endspaceless %}
+{% endblock form_errors %}
+ 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/brocoutesbrocante/css/job.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+        <h1>Ajouter une nouvelle manifestation</h1>
+
+    <form action="{{ path('manifestation_create') }}" method="post" {{ form_enctype(form) }}>
+        <table id="manifestation_form">
+            <tbody>
+                <tr>
+                    <th>{{ form_label(form.nom) }}</th>
+                    <td>
+                        {{ form_errors(form.nom) }}
+                        {{ form_widget(form.nom) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(form.lieu) }}</th>
+                    <td>
+                        {{ form_errors(form.lieu) }}
+                        {{ form_widget(form.lieu) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(form.date) }}</th>
+                    <td>
+                        {{ form_errors(form.date) }}
+                        {{ form_widget(form.date) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(form.latitude) }}</th>
+                    <td>
+                        {{ form_errors(form.latitude) }}
+                        {{ form_widget(form.latitude) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(form.longitude) }}</th>
+                    <td>
+                        {{ form_errors(form.longitude) }}
+                        {{ form_widget(form.longitude) }}
+                    </td>
+                </tr>
+
+            </tbody>
+            
+            <tfoot>
+                <tr>
+                    <td>
+                        <input type="submit" value="Ajouter la manifestation" />
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    {{ form_end(form) }}
+        <br/>
+        <ul class="record_actions">
+            <li>
+                <a href="{{ path('manifestation') }}">
+                    Retour à liste des manifestations
+                </a>
+            </li>
+       </ul>
+{% endblock %}
