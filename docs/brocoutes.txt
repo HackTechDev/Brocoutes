@@ -1,0 +1,68 @@
+[~/BROCOUTAI/lampp/htdocs] ➔ tar xvfz Symfony_Standard_2.3.7.tgz
+[~/BROCOUTAI/lampp/htdocs] ➔ mv Symfony/ brocoutes
+[~/BROCOUTAI/lampp/htdocs] ➔ cd brocoutes/
+
+http://192.168.1.13/phpmyadmin/ 
+htaccess : lampp/mot2passe
+phpmyadmin : root/mot2passe
+
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ curl -s https://getcomposer.org/installer | /opt/lampp/bin/php
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php composer.phar update
+
+http://brocoutes.localhost/config.php
+
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ chmod -R 777 app/cache
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ chmod -R 777 app/logs/
+
+http://brocoutes.localhost/app_dev.php
+
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console generate:bundle --namespace=Brocoutes/BrocanteBundle
+
+http://brocoutes.localhost/hello/sdf
+http://brocoutes.localhost/app_dev.php/hello/winzou
+
+3) Créer la base de donnée : 
+
+[/opt/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console doctrine:database:create
+
+
+3) Création de l'entitée : 
+
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console generate:doctrine:entity
+
+BrocoutesBrocanteBundle:Manifestation
+
+Configuration format : annotation
+
+5) Création de la table : 
+
+-Vérification :
+
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console doctrine:schema:update --dump-sql
+
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console doctrine:schema:update --force
+
+
+6) Fixture :
+
+[/opt/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console doctrine:fixtures:load
+
+6) Création du CRUD : 
+
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console doctrine:generate:crud --entity=BrocoutesBrocanteBundle:Manifestation --route-prefix=manifestation --with-write --format=yml
+
+
+7) Images, css :
+
+[/opt/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console assets:install web --symlink
+
+
+
+
+
+
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console cache:clear --env=prod
+[~/BROCOUTAI/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console cache:clear --env=cache
+
+
+
