@@ -23,6 +23,8 @@ http://brocoutes.localhost/app_dev.php/hello/winzou
 
 3) Créer la base de donnée : 
 
+[/opt/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console doctrine:database:drop --force
+
 [/opt/lampp/htdocs/brocoutes] ➔ /opt/lampp/bin/php app/console doctrine:database:create
 
 

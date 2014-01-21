@@ -24,163 +24,6 @@ class Manifestation
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="nom", type="string", length=255)
-     */
-    private $nom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="lieu", type="string", length=255)
-     */
-    private $lieu;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
-     */
-    private $adresse;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="adressecomplement", type="string", length=255, nullable=true)
-     */
-    private $adressecomplement;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="ville", type="string", length=255, nullable=true)
-     */
-    private $ville;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="departement", type="string", length=255, nullable=true)
-     */
-    private $departement;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="codepostal", type="string", length=255, nullable=true)
-     */
-    private $codepostal;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="latitude", type="string", length=255, nullable=true)
-     */
-    private $latitude;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="longitude", type="string", length=255, nullable=true)
-     */
-    private $longitude;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="dateouverture", type="datetime")
-     */
-    private $dateouverture;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="datefermeture", type="datetime")
-     */
-    private $datefermeture;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="organisateur", type="string", length=255, nullable=true)
-     */
-    private $organisateur;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="telephone", type="string", length=255, nullable=true)
-     */
-    private $telephone;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="courriel", type="string", length=255, nullable=true)
-     */
-    private $courriel;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="site", type="string", length=255, nullable=true)
-     */
-    private $site;
-
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="prixentree", type="integer", nullable=true)
-     */
-    private $prixentree;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="stand", type="integer", nullable=true)
-     */
-    private $stand;
-
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="information", type="string", length=255, nullable=true)
-     */
-    private $information;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="affiche", type="string", length=255, nullable=true)
-     */
-    private $affiche;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="exposant", type="string", length=255, nullable=true)
-     */
-    private $exposant;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="creation", type="datetime")
-     */
-    private $creation;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="miseajour", type="datetime")
-     */
-    private $miseajour;
-
-
-    /**
      * Get id
      *
      * @return integer 
@@ -189,6 +32,14 @@ class Manifestation
     {
         return $this->id;
     }
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
 
     /**
      * Set nom
@@ -213,6 +64,15 @@ class Manifestation
         return $this->nom;
     }
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lieu", type="string", length=255)
+     */
+    private $lieu;
+
+
     /**
      * Set lieu
      *
@@ -235,6 +95,15 @@ class Manifestation
     {
         return $this->lieu;
     }
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
+     */
+    private $adresse;
+
 
     /**
      * Set adresse
@@ -259,6 +128,15 @@ class Manifestation
         return $this->adresse;
     }
 
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adressecomplement", type="string", length=255, nullable=true)
+     */
+    private $adressecomplement;
+
     /**
      * Set adressecomplement
      *
@@ -282,6 +160,17 @@ class Manifestation
         return $this->adressecomplement;
     }
 
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ville", type="string", length=255, nullable=true)
+     */
+    private $ville;
+
+
     /**
      * Set ville
      *
@@ -304,6 +193,16 @@ class Manifestation
     {
         return $this->ville;
     }
+
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="departement", type="string", length=255, nullable=true)
+     */
+    private $departement;
 
     /**
      * Set departement
@@ -329,6 +228,13 @@ class Manifestation
     }
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="codepostal", type="string", length=255, nullable=true)
+     */
+    private $codepostal;
+
+    /**
      * Set codepostal
      *
      * @param string $codepostal
@@ -350,6 +256,16 @@ class Manifestation
     {
         return $this->codepostal;
     }
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="latitude", type="string", length=255, nullable=true)
+     */
+    private $latitude;
+
 
     /**
      * Set latitude
@@ -373,6 +289,12 @@ class Manifestation
     {
         return $this->latitude;
     }
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="longitude", type="string", length=255, nullable=true)
+     */
+    private $longitude;
 
     /**
      * Set longitude
@@ -397,6 +319,14 @@ class Manifestation
         return $this->longitude;
     }
 
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateouverture", type="datetime")
+     */
+    private $dateouverture;
+
     /**
      * Set dateouverture
      *
@@ -419,6 +349,15 @@ class Manifestation
     {
         return $this->dateouverture;
     }
+
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="datefermeture", type="datetime")
+     */
+    private $datefermeture;
+
 
     /**
      * Set datefermeture
@@ -443,6 +382,16 @@ class Manifestation
         return $this->datefermeture;
     }
 
+
+
+    
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="heureouverture", type="datetime")
+     */
+    private $heureouverture;
+
     /**
      * Set heureouverture
      *
@@ -465,6 +414,15 @@ class Manifestation
     {
         return $this->heureouverture;
     }
+
+
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="heurefermeture", type="datetime")
+     */
+    private $heurefermeture;
 
     /**
      * Set heurefermeture
@@ -489,6 +447,17 @@ class Manifestation
         return $this->heurefermeture;
     }
 
+
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="organisateur", type="string", length=255, nullable=true)
+     */
+    private $organisateur;
+
     /**
      * Set organisateur
      *
@@ -511,6 +480,14 @@ class Manifestation
     {
         return $this->organisateur;
     }
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length=255, nullable=true)
+     */
+    private $telephone;
 
     /**
      * Set telephone
@@ -536,6 +513,13 @@ class Manifestation
     }
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="courriel", type="string", length=255, nullable=true)
+     */
+    private $courriel;
+
+    /**
      * Set courriel
      *
      * @param string $courriel
@@ -558,6 +542,12 @@ class Manifestation
         return $this->courriel;
     }
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="site", type="string", length=255, nullable=true)
+     */
+    private $site;
 
     /**
      * Set site
@@ -583,32 +573,17 @@ class Manifestation
     }
 
     /**
-     * Set prixentree
+     * @var string
      *
-     * @param integer $prixentree
-     * @return Manifestation
+     * @ORM\Column(name="stand", type="integer", nullable=true)
      */
-    public function setPrixentree($prixentree)
-    {
-        $this->prixentree = $prixentree;
-    
-        return $this;
-    }
+    private $stand;
 
-    /**
-     * Get prixentree
-     *
-     * @return integer 
-     */
-    public function getPrixentree()
-    {
-        return $this->prixentree;
-    }
 
     /**
      * Set stand
      *
-     * @param integer $stand
+     * @param string $stand
      * @return Manifestation
      */
     public function setStand($stand)
@@ -621,12 +596,53 @@ class Manifestation
     /**
      * Get stand
      *
-     * @return integer 
+     * @return string 
      */
     public function getStand()
     {
         return $this->stand;
     }
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prixentree", type="integer", nullable=true)
+     */
+    private $prixentree;
+
+    /**
+     * Set prixentree
+     *
+     * @param string $prixentree
+     * @return Manifestation
+     */
+    public function setPrix($prixentree)
+    {
+        $this->prixentree = $prixentree;
+    
+        return $this;
+    }
+
+    /**
+     * Get prixentree
+     *
+     * @return string 
+     */
+    public function getPrix()
+    {
+        return $this->prixentree;
+    }
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="information", type="string", length=255, nullable=true)
+     */
+    private $information;
 
 
     /**
@@ -652,6 +668,16 @@ class Manifestation
         return $this->information;
     }
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="affiche", type="string", length=255, nullable=true)
+     */
+    private $affiche;
+
+
+
     /**
      * Set affiche
      *
@@ -674,6 +700,16 @@ class Manifestation
     {
         return $this->affiche;
     }
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="exposant", type="string", length=255, nullable=true)
+     */
+    private $exposant;
+
+
 
     /**
      * Set exposant
@@ -698,10 +734,22 @@ class Manifestation
         return $this->exposant;
     }
 
+
+
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="creation", type="datetime")
+     */
+    private $creation;
+
+
+
     /**
      * Set creation
      *
-     * @param \DateTime $creation
+     * @param string $creation
      * @return Manifestation
      */
     public function setCreation($creation)
@@ -714,17 +762,27 @@ class Manifestation
     /**
      * Get creation
      *
-     * @return \DateTime 
+     * @return string 
      */
     public function getCreation()
     {
         return $this->creation;
     }
 
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="miseajour", type="datetime")
+     */
+    private $miseajour;
+
+
+
     /**
      * Set miseajour
      *
-     * @param \DateTime $miseajour
+     * @param string $miseajour
      * @return Manifestation
      */
     public function setMiseajour($miseajour)
@@ -737,21 +795,21 @@ class Manifestation
     /**
      * Get miseajour
      *
-     * @return \DateTime
+     * @return string 
      */
     public function getMiseajour()
     {
         return $this->miseajour;
     }
 
+
     public function getNomSlug()
-    {   
+    {
         return Brocante::slugify($this->getNom());
-    }   
+    }
  
     public function getLieuSlug()
-    {   
+    {
         return Brocante::slugify($this->getLieu());
-    } 
-
+    }
 }

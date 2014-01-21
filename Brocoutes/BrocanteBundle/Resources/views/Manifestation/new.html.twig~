@@ -196,7 +196,7 @@
 
 
             </tbody>
-        <iframe src="http://brocoutes.localhost/geoloc.php" width="800" height="500" frameborder="0" style="width: 800px;height: 500px;overflow: hidden;"></iframe>             
+        <iframe src="http://brocoutes.localhost/geoloc.php?lat={{ entity.latitude }}&lon={{ entity.longitude }}" width="500" height="500" frameborder="0" style="width: 500px;height: 500px;overflow: hidden;"></iframe>             
             <tfoot>
                 <tr>
                     <td>

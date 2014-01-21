@@ -12,9 +12,11 @@ departement : string
 ville : string
 codepostal : string
 geoloc : string
+
 type :  smallint (publique, particulier, commerce)
 exposant: smallint (Non communiqué, particulier, professionnel, particulier et professionel)
 adresse : string
+
 organisateur : string
 horaire : string
 telephone : string

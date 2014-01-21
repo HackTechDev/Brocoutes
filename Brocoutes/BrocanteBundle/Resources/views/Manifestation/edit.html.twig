@@ -39,12 +39,20 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>{{ form_label(edit_form.date) }}</th>
+                    <th>{{ form_label(edit_form.dateouverture) }}</th>
                     <td>
-                        {{ form_errors(edit_form.date) }}
-                        {{ form_widget(edit_form.date) }}
+                        {{ form_errors(edit_form.dateouverture) }}
+                        {{ form_widget(edit_form.dateouverture) }}
                     </td>
                 </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.datefermeture) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.datefermeture) }}
+                        {{ form_widget(edit_form.datefermeture) }}
+                    </td>
+                </tr>
+
                 <tr>
                     <th>{{ form_label(edit_form.latitude) }}</th>
                     <td>
@@ -59,6 +67,136 @@
                         {{ form_widget(edit_form.longitude) }}
                     </td>
                 </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.adresse) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.adresse) }}
+                        {{ form_widget(edit_form.adresse) }}
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th>{{ form_label(edit_form.adressecomplement) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.adressecomplement) }}
+                        {{ form_widget(edit_form.adressecomplement) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.ville) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.ville) }}
+                        {{ form_widget(edit_form.ville) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.departement) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.departement) }}
+                        {{ form_widget(edit_form.departement) }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>{{ form_label(edit_form.codepostal) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.codepostal) }}
+                        {{ form_widget(edit_form.codepostal) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.organisateur) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.organisateur) }}
+                        {{ form_widget(edit_form.organisateur) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.telephone) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.telephone) }}
+                        {{ form_widget(edit_form.telephone) }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>{{ form_label(edit_form.courriel) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.courriel) }}
+                        {{ form_widget(edit_form.courriel) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.site) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.site) }}
+                        {{ form_widget(edit_form.site) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.stand) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.stand) }}
+                        {{ form_widget(edit_form.stand) }}
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>{{ form_label(edit_form.prixentree) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.prixentree) }}
+                        {{ form_widget(edit_form.prixentree) }}
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th>{{ form_label(edit_form.information) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.information) }}
+                        {{ form_widget(edit_form.information) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.affiche) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.affiche) }}
+                        {{ form_widget(edit_form.affiche) }}
+                    </td>
+                </tr>
+                
+
+
+                <tr>
+                    <th>{{ form_label(edit_form.exposant) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.exposant) }}
+                        {{ form_widget(edit_form.exposant) }}
+                    </td>
+                </tr>
+                
+
+
+                <tr>
+                    <th>{{ form_label(edit_form.creation) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.creation) }}
+                        {{ form_widget(edit_form.creation) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>{{ form_label(edit_form.miseajour) }}</th>
+                    <td>
+                        {{ form_errors(edit_form.miseajour) }}
+                        {{ form_widget(edit_form.miseajour) }}
+                    </td>
+                </tr>
+                
+
+
+
+
             </tbody>
             <tfoot>
                 <tr>
@@ -71,6 +209,7 @@
             </tfoot>
 
         </table>
+                
     {{ form_end(edit_form) }}
         <br/>
         <ul class="record_actions">

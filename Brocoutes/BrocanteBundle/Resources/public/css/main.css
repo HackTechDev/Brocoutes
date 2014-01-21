@@ -37,12 +37,10 @@ body
 
 #header
 {
-  background: url(../images/bg-header.jpg) repeat-x top;
 }
 
 #header h1
 {
-  height: 110px;
   width: 783px;
   margin: 0 auto;
 }
@@ -50,8 +48,7 @@ body
 #header h1 a {
   display: block;
   width: 150px;
-  height: 110px;
-  background: url(../images/logo.jpg) no-repeat;
+  height: 50px;
 }
 
 
@@ -69,12 +66,7 @@ body
 
 #sub_header .search input
 {
-  background: url(../images/button-search.jpg) no-repeat;
-  text-indent: -9999px;
-  border: 0;
   width: 95px;
-  height: 40px;
-  margin-left: 10px;
 }
 
 #sub_header .search input:hover
@@ -161,23 +153,14 @@ body
 
 #content h1
 {
-  margin-top: 10px;
-  margin-bottom: 1px;
-  padding: 0px 15px;
-  font-size: 124%;
   text-transform: uppercase;
-  background: url(../images/bg-listheader.gif) no-repeat;
-  line-height: 32px;
-  color: #fff;
 }
 
 #content h1 a
 {
-  color: #fff;
   text-decoration: none;
   font-style: normal;
   text-transform: uppercase;
-  line-height: 32px;
 }
 
 #footer
@@ -186,7 +169,6 @@ body
   font-size: 90%;
   margin-bottom: 0px;
   height: 153px;
-  background: url(../images/bg-footer.jpg) repeat-x bottom;
   padding-top: 10px;
   position: relative;
 }

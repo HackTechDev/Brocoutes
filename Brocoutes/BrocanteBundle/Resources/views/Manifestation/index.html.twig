@@ -7,14 +7,15 @@
 
 {% block content %}
     {% block body -%}
-        <h1>List des manifestations</h1>
+        <h1>Liste des manifestations</h1>
 
         <table class="records_list">
             <thead>
                 <tr>
                     <th style="text-align: center">Nom</th>
                     <th style="text-align: center">Lieu</th>
-                    <th style="text-align: center">Date</th>
+                    <th style="text-align: center">Date ouverture</th>
+                    <th style="text-align: center">Date fermeture</th>
                     <th style="text-align: center">Actions</th>
                 </tr>
             </thead>
@@ -27,7 +28,10 @@
                             {{ entity.lieu }}</td>
                     <td>
                     &nbsp;
-                            {% if entity.date %}{{ entity.date|date('d/m/Y') }}{% endif %}</td>
+                            {% if entity.dateouverture %}{{ entity.dateouverture|date('d/m/Y') }}{% endif %}</td>
+                    <td>
+                    &nbsp;
+                            {% if entity.datefermeture %}{{ entity.datefermeture|date('d/m/Y') }}{% endif %}</td>
                     <td>
                     &nbsp;
                             <a href="{{ path('manifestation_show', { 'id': entity.id, 'nom': entity.nomslug, 'lieu': entity.lieuslug }) }}">Afficher</a> |
