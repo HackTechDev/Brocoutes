@@ -96,6 +96,20 @@ class ManifestationController extends Controller
     }
 
     /**
+     * Compute an itineraire.
+     *
+     */
+    public function itineraireAction()
+    {
+
+        return $this->render('BrocoutesBrocanteBundle:Manifestation:itineraire.html.twig');
+    }
+
+
+
+
+
+    /**
      * Finds and displays a Manifestation entity.
      *
      */

@@ -30,3 +30,9 @@ manifestation_delete:
     pattern:  /{id}/delete
     defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:delete" }
     requirements: { _method: post|delete }
+
+manifestation_itineraire:
+    pattern:  /itineraire
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:itineraire" }
+
+
