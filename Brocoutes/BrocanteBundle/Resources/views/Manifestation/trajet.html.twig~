@@ -6,6 +6,32 @@
    
 {% endblock %}
 {% block content %}
-    <h2>Calcule du temps et de la distance de plusieurs trajet</h2>
+ <h2>Calcule de plusieurs trajets<h2>
+<br/> 
+         <table class="records_list">
 
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td><a href="{{ path('manifestation_show', { 'id': entity.id, 'nom': entity.nomslug, 'lieu': entity.lieuslug }) }}">{{ entity.nom }}</a></td>
+                    <td>
+                    &nbsp;
+                            {{ entity.lieu }}</td>
+                    <td>
+                    &nbsp;
+                            {% if entity.dateouverture %}{{ entity.dateouverture|date('d/m/Y') }}{% endif %}</td>
+                    <td>
+                    &nbsp;
+                            {% if entity.datefermeture %}{{ entity.datefermeture|date('d/m/Y') }}{% endif %}</td>
+                    <td>
+                    &nbsp;
+                            <a href="{{ path('manifestation_show', { 'id': entity.id, 'nom': entity.nomslug, 'lieu': entity.lieuslug }) }}">Afficher</a> |
+                            <a href="{{ path('manifestation_edit', { 'id': entity.id }) }}">Editer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+ <br/>
+ <iframe src="{{ asset('bundles/brocoutesbrocante/trajet/trajet.php') }}" frameborder="0" scrolling="no" width="1000px" height="800"></iframe>
 {% endblock %}

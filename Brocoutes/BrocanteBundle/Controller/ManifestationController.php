@@ -111,8 +111,14 @@ class ManifestationController extends Controller
      */
     public function trajetAction()
     {
+        $em = $this->getDoctrine()->getManager();
 
-        return $this->render('BrocoutesBrocanteBundle:Manifestation:trajet.html.twig');
+        $entities = $em->getRepository('BrocoutesBrocanteBundle:Manifestation')->findAll();
+
+        return $this->render('BrocoutesBrocanteBundle:Manifestation:trajet.html.twig', array(
+            'entities' => $entities,
+        ));
+
     }
 
 

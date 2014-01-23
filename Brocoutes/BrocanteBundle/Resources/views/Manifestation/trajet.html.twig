@@ -7,5 +7,28 @@
 {% endblock %}
 {% block content %}
  <h2>Calcule de plusieurs trajets<h2>
+<br/> 
+         <table class="records_list">
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td>
+                    &nbsp;
+                            {{ entity.lieu }}</td>
+                    <td>
+                    &nbsp;
+                            {{ entity.latitude }}</td>
+                    <td>
+                    &nbsp;
+                            {{ entity.longitude }}</td>
+                    <td>
+                    &nbsp;
+                            <a href="{{ path('manifestation_show', { 'id': entity.id, 'nom': entity.nomslug, 'lieu': entity.lieuslug }) }}">Afficher</a> 
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+ <br/>
  <iframe src="{{ asset('bundles/brocoutesbrocante/trajet/trajet.php') }}" frameborder="0" scrolling="no" width="1000px" height="800"></iframe>
 {% endblock %}
