@@ -25,7 +25,7 @@ a
 body
 {
   font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
-  background-color: #828f95;
+  /*background-color: #828f95;*/
 }
 
 #container
@@ -80,17 +80,7 @@ body
 
 #sub_header .search input#search_keywords
 {
-  font-size: 160%;
-  padding: 8px 10px;
-  line-height: 1.5em;
-  margin-bottom: 3px;
-  margin-left: 0px;
   width: 579px;
-  height: 27px;
-  border: 0;
-  background: url(../images/search-box.jpg);
-  text-indent: 0;
-  color: #666;
 }
 
 #sub_header .post h2
