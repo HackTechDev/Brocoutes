@@ -1,0 +1,11 @@
+{% extends 'BrocoutesBrocanteBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/brocoutesbrocante/css/job.css') }}" type="text/css" media="all" />
+   
+{% endblock %}
+{% block content %}
+    <h2>Calcule du temps et de la distance de plusieurs trajet</h2>
+
+{% endblock %}

@@ -35,4 +35,8 @@ manifestation_itineraire:
     pattern:  /itineraire
     defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:itineraire" }
 
+manifestation_trajet:
+    pattern:  /trajet
+    defaults: { _controller: "BrocoutesBrocanteBundle:Manifestation:trajet" }
+
 

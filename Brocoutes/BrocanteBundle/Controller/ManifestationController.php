@@ -105,6 +105,18 @@ class ManifestationController extends Controller
         return $this->render('BrocoutesBrocanteBundle:Manifestation:itineraire.html.twig');
     }
 
+    /**
+     * Compute an trajet.
+     *
+     */
+    public function trajetAction()
+    {
+
+        return $this->render('BrocoutesBrocanteBundle:Manifestation:trajet.html.twig');
+    }
+
+
+
 
 
 
